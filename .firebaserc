@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "connected-services-app"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

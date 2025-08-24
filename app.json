@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "ConnectedServicesApp",
+    "slug": "ConnectedServicesApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "We use your location to show local weather and a map.",
+        "NSCameraUsageDescription": "We use your camera to take photos and scan QR codes.",
+        "NSPhotoLibraryAddUsageDescription": "We save your photos to your library.",
+        "NSPhotoLibraryUsageDescription": "We access your photo library to show saved photos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "weatherApiKey": "71562a9af4dbd9c2587ec4e604d181a6",
+      "mapboxToken": "pk.eyJ1Ijoic2N2aWN0b3JpYSIsImEiOiJjbHozZWIzaTUxd3JpMmtwdnZwMHdheDF1In0.2-QCTp7ZOL-HlLkXm4vsvw"
+    },
+    "plugins": [
+      "expo-barcode-scanner",
+      "expo-camera",
+      "expo-maps",
+      "expo-location"
+    ]
+  }
+}
