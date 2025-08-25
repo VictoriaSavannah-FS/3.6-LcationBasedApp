@@ -19,6 +19,10 @@ export default function Home() {
       <Link href="/profile" asChild>
         <Button title="Profile 😎 | ⚙️Settings" />
       </Link>
+      {/* NEw LocationBAsed----- */}
+      <Link href="/nearby" asChild>
+        <Button title="Nearby Locations 😎 " />
+      </Link>
     </View>
   );
 }

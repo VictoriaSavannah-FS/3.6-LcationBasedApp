@@ -33,7 +33,7 @@
     },
     "extra": {
       "weatherApiKey": "71562a9af4dbd9c2587ec4e604d181a6",
-      "mapboxToken": "pk.eyJ1Ijoic2N2aWN0b3JpYSIsImEiOiJjbHozZWIzaTUxd3JpMmtwdnZwMHdheDF1In0.2-QCTp7ZOL-HlLkXm4vsvw"
+      "MAPBOX_TOKEN": "pk.eyJ1Ijoic2N2aWN0b3JpYSIsImEiOiJjbHozZWIzaTUxd3JpMmtwdnZwMHdheDF1In0.2-QCTp7ZOL-HlLkXm4vsvw"
     },
     "plugins": [
       "expo-barcode-scanner",

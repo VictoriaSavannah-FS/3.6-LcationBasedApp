@@ -1,4 +1,7 @@
-import * as Location from "expo-location";
+// import * as Location from "expo-location";
+// jsut reuse my own getUserLcation alrady previosly created
+
+import { getUserLocation } from "../services/location";
 import axios from "axios";
 
 //
@@ -33,23 +36,16 @@ class NearbyPlacesService {
     this.apiKey = apiKey;
   }
 
-  /** Get current user location with permission flow */
-  async getCurrentLocation(): Promise<Location.LocationObject> {
-    const { status, canAskAgain } =
-      await Location.requestForegroundPermissionsAsync();
-
-    if (status !== "granted") {
-      const msg = canAskAgain
-        ? "Location permission denied."
-        : "Location permission permanently denied in settings.";
-      throw new Error(msg);
-    }
-
-    // Balanced accuracy = good battery/latency tradeoff
-    return await Location.getCurrentPositionAsync({
-      accuracy: Location.Accuracy.Balanced,
-      timeInterval: 10_000, // throttle OS updates
-    });
+  /** -- Get current user location @services/lcoatin --- */
+  async getCurrentLocation(): Promise<{
+    coords: { latitude: number; longitude: number };
+    timestamp: number;
+  }> {
+    const { latitude, longitude } = await getUserLocation();
+    return {
+      coords: { latitude, longitude },
+      timestamp: Date.now(),
+    };
   }
 
   /** Search POIs near coordinates. Note: Mapbox uses `proximity` to *bias* results, not hard radius filtering. */
