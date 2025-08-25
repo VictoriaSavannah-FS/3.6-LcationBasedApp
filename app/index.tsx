@@ -19,6 +19,10 @@ export default function Home() {
       <Link href="/profile" asChild>
         <Button title="Profile 😎 | ⚙️Settings" />
       </Link>
+      {/* for enw Nearby FEature */}
+      <Link href="/nearby" asChild>
+        <Button title="Nearby Locations 😎 Feature" />
+      </Link>
     </View>
   );
 }
